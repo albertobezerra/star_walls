@@ -7,6 +7,7 @@
     list-style: none;
     color: white;
 }
+
 a{
     text-decoration: none;
 }
@@ -54,4 +55,63 @@ header{
 
 .social >i:hover{
     color: gold;
+}
+
+
+.main-content{
+    width: 87%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+    padding: 0 20px;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.main-container > h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 20px;
+    color: gold;
+    font-weight: 300;
+}
+
+.card{
+    width: 230px;
+    height: 470px;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 5px;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.foto-name-bg{
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.foto-name{
+    font-family: 'Bebas Neue', sans-serif; 
+    color: gold;
+    font-size: 1rem;
 }
