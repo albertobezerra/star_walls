@@ -115,3 +115,51 @@ header{
     color: gold;
     font-size: 1rem;
 }
+
+.buttons{
+    width: 77%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+button{
+    width: 70px;
+    height: 25px;
+    background-color: gold;
+    color: #000;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #000;
+    outline: none;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #000;
+    color: gold;
+}
+
+#back-button{
+    visibility: hidden;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 40px 0 20px 0;
+}
+
+.footer-logo{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.copyright{
+    font-weight: 500;
+}
