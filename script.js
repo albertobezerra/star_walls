@@ -19,7 +19,7 @@ async function loadCharacters(url){
 
         responseJson.results.forEach((character) => {
             const card = document.createElement("div")
-            card.style.backgroundImage = `url("https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg)`
+            card.style.backgroundImage = `url("https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg")`
             card.className = "card"
 
             const characterNameBG = document.createElement("div")
