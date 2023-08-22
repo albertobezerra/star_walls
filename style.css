@@ -59,7 +59,7 @@ header{
 
 
 .main-content{
-    width: 87%;
+    width: 95%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -84,7 +84,7 @@ header{
 }
 
 .card{
-    width: 230px;
+    width: 320px;
     height: 470px;
     background-position: 50% 50%;
     background-size: cover;
