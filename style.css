@@ -178,7 +178,7 @@ footer{
 
 .modalContent{
     width: 25vw;
-    height: 70vh;
+    height: 50vh;
     background-color: #000;
     border-radius: 12px;
     display: flex;
@@ -186,4 +186,20 @@ footer{
     row-gap: 15px;
     padding: 30px 10px;
     align-items: center;
+    
+}
+
+.fotoModal{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: 50% 10%;
+    background-size: cover;
+}
+
+.characterDetails{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: gold;
 }

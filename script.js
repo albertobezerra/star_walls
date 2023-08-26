@@ -38,8 +38,44 @@ async function loadCharacters(url){
             characterNameBG.appendChild(characterName)
             card.appendChild(characterNameBG)
             card.onclick = () =>{
+
                 const modal = document.getElementById("modal")
                 modal.style.visibility = "visible"
+
+                const modalContent = document.getElementById("modalContent")
+                modalContent.innerHTML = ""
+
+                const characterImage = document.createElement("div")
+                characterImage.style.backgroundImage = `url("https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg")`
+                characterImage.className = "fotoModal"
+
+                const name = document.createElement("span")
+                name.className = "characterDetails"
+                name.innerText = `Nome: ${character.name}`
+
+                const characterHeight = document.createElement("span")
+                characterHeight.className = "characterDetails"
+                characterHeight.innerText = `Altura: ${character.height}`
+
+                const peso = document.createElement("span")
+                peso.className = "characterDetails"
+                peso.innerText = `Peso: ${character.mass}`
+
+                const eyeColor = document.createElement("span")
+                eyeColor.className = "characterDetails"
+                eyeColor.innerText = `Cor dos olhos: ${character.eye_color}`
+
+                const niver = document.createElement("span")
+                niver.className = "characterDetails"
+                niver.innerText = `Nascimento: ${character.birth_year}`
+
+                modalContent.appendChild(characterImage)
+                modalContent.appendChild(name)
+                modalContent.appendChild(characterHeight)
+                modalContent.appendChild(peso)
+                modalContent.appendChild(eyeColor)
+                modalContent.appendChild(niver)
+
             }
             mainContent.appendChild(card)
         });
