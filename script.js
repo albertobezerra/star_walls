@@ -63,7 +63,7 @@ async function loadCharacters(url){
 
                 const eyeColor = document.createElement("span")
                 eyeColor.className = "characterDetails"
-                eyeColor.innerText = `Cor dos olhos: ${character.eye_color}`
+                eyeColor.innerText = `Cor dos olhos: ${convertEyeColor(character.eye_color)}`
 
                 const niver = document.createElement("span")
                 niver.className = "characterDetails"
@@ -126,4 +126,20 @@ function hideModal(){
     const modal = document.getElementById("modal")
     modal.style.visibility = "hidden"
 
+}
+
+function convertEyeColor(eyeColor){
+    const cores = {
+        blue: "Azul",
+        brown:"Castanho",
+        green: "Verde",
+        yellow: "Amarelo",
+        black: "Preto",
+        pink: "Rosa",
+        red: "Vermelho",
+        orange: "Laranja",
+        hazel: "Avelã",
+        unknow: "Desconhecida",
+    }
+    return cores [eyeColor] || eyeColor;
 }
