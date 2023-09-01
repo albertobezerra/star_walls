@@ -55,11 +55,11 @@ async function loadCharacters(url){
 
                 const characterHeight = document.createElement("span")
                 characterHeight.className = "characterDetails"
-                characterHeight.innerText = `Altura: ${character.height}`
+                characterHeight.innerText = `Altura: ${converterAltura(character.height)}`
 
                 const peso = document.createElement("span")
                 peso.className = "characterDetails"
-                peso.innerText = `Peso: ${character.mass}`
+                peso.innerText = `Peso: ${converterPesoAdicionaMedida(character.mass)}`
 
                 const eyeColor = document.createElement("span")
                 eyeColor.className = "characterDetails"
@@ -67,7 +67,7 @@ async function loadCharacters(url){
 
                 const niver = document.createElement("span")
                 niver.className = "characterDetails"
-                niver.innerText = `Nascimento: ${character.birth_year}`
+                niver.innerText = `Nascimento: ${converterAniversario(character.birth_year)}`
 
                 modalContent.appendChild(characterImage)
                 modalContent.appendChild(name)
@@ -139,7 +139,30 @@ function convertEyeColor(eyeColor){
         red: "Vermelho",
         orange: "Laranja",
         hazel: "Avelã",
-        unknow: "Desconhecida",
+        unknown: "Desconhecida",
     }
-    return cores [eyeColor] || eyeColor;
+    return cores[eyeColor] || eyeColor;
+}
+
+function converterAltura(height) {
+    if (height === "unknown") {
+        return "Desconhecido"
+    }
+    return(height / 100).toFixed(2); // .toFixed determina a resposta com duas casas decimais
+}
+
+function converterPesoAdicionaMedida(mass) {
+    if (mass === "unknown") {
+        return "Desconhecido"
+    }
+
+    return `${mass} kg`
+}
+
+function converterAniversario(birth_year){
+    if (birth_year === "unknown") {
+        return "Desconhecido"
+    }
+
+    return birth_year
 }
