@@ -241,5 +241,24 @@ footer{
         font-size: 1.6rem;
     }
 
+    .modalContent{
+        width: 80vw;
+        height: auto;
+        background-color: gold;
+    }
+
+    .characterDetails{
+        color: #000;
+    }
+
+    .buttons{
+        width: 86%;
+    }
+
+    button{
+        width: 70px;
+        height: 35px;
+    }
+
     
   }
