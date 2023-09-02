@@ -203,3 +203,43 @@ footer{
     font-weight: lighter;
     color: gold;
 }
+
+.menuMobile{
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .menuMobile{
+        display: block;
+        
+        
+    }
+
+    .logoMobile {
+        display: flex;
+        justify-content: center;
+        padding-top: 35px;
+    }
+
+
+    header{
+        display: none;
+    }
+    .main-container > h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 18px;
+    }
+
+    .foto-name-bg{
+        border-radius: 5px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .foto-name{
+        font-size: 1.6rem;
+    }
+
+    
+  }
